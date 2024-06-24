@@ -1,3 +1,7 @@
+## Why does this exist
+
+Because I got really tired of recompiling OpenCV dependencies in my own projects and cross compiling is miserable for GoCV. This solves **both** of those problems.
+
 # Self contained OpenCV instance
 
 This directory is a proper implementation of all dependencies needed for OpenCV to be portable and invokable by a x64 amd based docker image.
@@ -26,7 +30,3 @@ _The use case of this would fall under the concept of 'portable OpenCV' app_
 The only thing you need to actually do in this context is include a template.png (Or scrub that out of the Dockerfile yourself) and throw in your executable with the name *./opencv_app* that's really all there is to it.
 
 You can then deploy this on any architecture and distro so long as it has _apt_ and _sudo_ along with an internet connection and the ability to properly run docker.
-
-## Why does this exist
-
-Because I got really tired of recompiling OpenCV dependencies in my own projects and cross compiling is miserable for GoCV. This solves **both** of those problems.
