@@ -1,0 +1,16 @@
+I did the voodoo docker multi-architecture support song and dance "buildx"
+
+I thne went and copied all the opencv dependencies from this containers image from: /usr/local/lib/
+
+I then created a file called /etc/ld.so.conf.d/opencv.conf and wrote to it the path to the folder where the binary is stored. For example, I wrote /usr/local/lib/ to my opencv.conf file.
+
+Note I had to like create that .conf file.
+
+Once that was done we hit it with: ldconfig -v
+
+I then went and installed libgtk2.0-0 to the container
+
+Then I repeated the same steps above for the missing dependency libdc1394
+
+I then repeated this step for 5 hours straight, recompiling our zip, sending it to the server and then bouncing it back off to the virtualization PI and running it in our docker instance. For 5 hours.
+
