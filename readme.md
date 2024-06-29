@@ -4,13 +4,13 @@ Because I got really tired of recompiling OpenCV dependencies in my own projects
 
 # Self contained OpenCV instance
 
-This directory is a proper implementation of all dependencies needed for OpenCV to be portable and invokable by a x64 amd based docker image.
+This repository is a proper implementation of all dependencies needed for OpenCV to be portable and invokable by a x64 amd based docker image.
+
+## Setup for Arm/Raspberry Pi
 
 In order to leverage this you need a multi-architectured docker instance via qemu.
 
 Thankfully I've already done the legwork and created a script that installs docker to your current system if it doesn't exist, and upgrades it to a multi-architectured environment.
-
-Furthermore, this self contained Docker instance of OpenCV is not 'go' only, as it's dependency based - meaning, go ahead and deploy this where-ever you want and you can use OpenCV.
 
 ## Using the default context and application in this directory
 
@@ -22,10 +22,7 @@ From there, you just need to have a golang application invoke my 'send png' or '
 
 The default application is designed to spit out an output.png which you can plop down to the active directory using -v /app/ ./ or you can use the one-lined invoker script I made.
 
-
 ## Leveraging this as a boilerplate of sorts.
-
-_The use case of this would fall under the concept of 'portable OpenCV' app_
 
 The only thing you need to actually do in this context is include a template.png (Or scrub that out of the Dockerfile yourself) and throw in your executable with the name *./opencv_app* that's really all there is to it.
 
