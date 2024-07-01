@@ -6,6 +6,8 @@ Because I got really tired of recompiling OpenCV dependencies in my own projects
 
 This repository is a proper implementation of all dependencies needed for OpenCV to be portable and invokable by a x64 amd based docker image.
 
+These dependencies are the bare-minimum needed to run OpenCV applications (or at-least in what I've tested out of box with ubuntu).
+
 ## Setup for Arm/Raspberry Pi
 
 In order to leverage this you need a multi-architectured docker instance via qemu.
