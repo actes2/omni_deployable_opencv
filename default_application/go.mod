@@ -1,4 +1,4 @@
-module garrysmod_bot
+module opencv_app
 
 go 1.22.3
 
